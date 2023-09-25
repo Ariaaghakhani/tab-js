@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.white {
+  background-color: white !important;
+  color: black !important;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: rgb(241, 245, 248);
+}
+body > .header {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+body > .header > h1 {
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+  /* border: 1px solid black; */
+  width: 55%;
+}
+body > .header > p {
+  width: 46%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+}
+body > .section {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 300px;
+  margin-top: 50px;
+}
+body > .section > figure {
+  width: 48%;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+body > .section > figure > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.4s ease;
+  /* opacity: 0; */
+}
+body > .section > figure > img::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.629);
+  top: 0;
+  left: 0;
+  transform: translate(0, -12.5%);
+  z-index: 10;
+}
+body > .section > div {
+  width: 48%;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+body > .section > div > ul {
+  list-style-type: none;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  /* background-color: #fff; */
+}
+body > .section > div > ul > li {
+  display: flex;
+  width: 33.3333333333%;
+  justify-content: center;
+  /* border: 1px solid black; */
+  height: 100%;
+  align-items: center;
+  font-weight: 500;
+  background-color: rgb(218, 226, 236);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+body > .section > div > ul > li:hover {
+  background-color: hsl(205, 100%, 96%);
+  color: #49a6e9;
+  transition: 0.4s ease;
+}
+body > .section > div > article {
+  padding: 10px 30px;
+  position: absolute;
+  opacity: 0;
+}/*# sourceMappingURL=master.css.map */

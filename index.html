@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .white {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .show {
+        opacity: 1 !important;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        font-family: Verdana, Geneva, sans-serif;
+        background-color: rgb(241, 245, 248);
+
+        >.header {
+            padding-top: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+
+            >h1 {
+                display: flex;
+                justify-content: center;
+                padding: 20px 40px;
+                /* border: 1px solid black; */
+                width: 55%;
+            }
+
+            >p {
+                width: 46%;
+                display: flex;
+                justify-content: center;
+                padding: 20px 40px;
+            }
+        }
+
+        >.section {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            min-height: 300px;
+            margin-top: 50px;
+
+            >figure {
+                width: 48%;
+                /* border: 1px solid black; */
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+
+                >img {
+                    width: 100%;
+                    object-fit: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: .4s ease;
+
+                    /* opacity: 0; */
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: rgba(0, 0, 0, 0.629);
+                        top: 0;
+                        left: 0;
+                        transform: translate(0, -12.5%);
+                        z-index: 10;
+                    }
+                }
+            }
+
+            >div {
+                width: 48%;
+                /* border: 1px solid black; */
+                border-radius: 10px;
+                overflow: hidden;
+                background: white;
+                position: relative;
+
+                >ul {
+                    list-style-type: none;
+                    /* border: 1px solid black; */
+                    display: flex;
+                    justify-content: space-around;
+                    height: 50px;
+                    align-items: center;
+
+                    /* background-color: #fff; */
+                    >li {
+                        display: flex;
+                        width: calc(100% / 3);
+                        justify-content: center;
+                        /* border: 1px solid black; */
+                        height: 100%;
+                        align-items: center;
+                        font-weight: 500;
+                        background-color: rgb(218, 226, 236);
+                        transition: .4s ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: hsl(205, 100%, 96%);
+                            color: #49a6e9;
+                            transition: .4s ease;
+                        }
+                    }
+                }
+
+                >article {
+                    padding: 10px 30px;
+                    position: absolute;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, excepturi?</p>
+    </div>
+    <div class="section">
+        <figure>
+            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="img1">
+            <img src="https://images.pexels.com/photos/534174/pexels-photo-534174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="img2">
+            <img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="" id="img3">
+        </figure>
+        <div>
+            <ul>
+                <li>Consultant</li>
+                <li>Design</li>
+                <li>Construction</li>
+            </ul>
+            <article id="tab">
+                <h2>Consultant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae fugiat atque ipsam maiores aliquid
+                    culpa, animi dolores quis quod voluptatum.</p>
+            </article>
+            <article id="tab">
+                <h2>Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptate saepe labore deserunt nihil
+                    enim, natus sunt harum ullam sint autem blanditiis! Nobis earum blanditiis incidunt temporibus
+                    accusantium ipsam aliquam?</p>
+            </article>
+            <article id="tab">
+                <h2>Construction</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo reiciendis repudiandae
+                    reprehenderit tempora necessitatibus.</p>
+            </article>
+        </div>
+    </div>
+</body>
+<script src="asset/master.js"></script>
+
+</html>
